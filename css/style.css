@@ -49,7 +49,7 @@ body {
     font-weight: 700;
 }
 
-.neutralStar {
+.neutral-star {
     color: var(--main-bg-color)
 }
 
@@ -68,16 +68,7 @@ body {
 
 /****** Header *****************/
 
-header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-}
 
-nav {
-    
-}
 /****** Hebergements ***********/
 .hebergements {
     width: 65%;
