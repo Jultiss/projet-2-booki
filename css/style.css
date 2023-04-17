@@ -67,7 +67,56 @@ body {
 }
 
 /****** Header *****************/
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 79px;
+}
 
+.logo img {
+    width: 61,09px;
+    height: 19px;
+}
+
+nav ul {
+  display: flex;
+  align-items: start;
+  height: 79px;
+}
+
+ul {
+    list-style: none;
+    padding: unset;
+  }
+  
+nav li {
+    padding: 10px 33.5px;
+    height: 79px;
+
+}
+
+nav li:hover {
+    border-top: solid 2px #0065FC;
+    cursor: pointer;
+    padding: 10px 33.5px;
+}
+
+nav li:hover a {
+    color: #0065FC;
+}
+
+.menu a {
+    text-decoration: none;
+    font-weight: 500;
+}
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
 
 /****** Hebergements ***********/
 .hebergements {
@@ -184,7 +233,7 @@ body {
 
     .populaires-cards {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: space-between;
     }
 
