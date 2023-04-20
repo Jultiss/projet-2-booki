@@ -37,6 +37,13 @@ body {
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
 }
 
+.card-link {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 33%;
+    margin: auto;
+}
+
 .card img {
     object-fit: cover;
 }
@@ -151,8 +158,8 @@ nav li:hover a {
     align-items: center;
     text-align: center;
     padding: 0px;
-    width: 377px;
-    height: 49px;
+    width: 35%;
+    height: 50px;
     background: #FFFFFF;
     border: 1px solid #F2F2F2;
     border-radius: 15px;
@@ -160,8 +167,9 @@ nav li:hover a {
 }
 
 .search-icon {
-    width: 50px;
-    height: 49px;
+    width: 15%;
+    min-width: 50px;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -175,19 +183,31 @@ nav li:hover a {
 }
 
 .search-text {
-    height: 49px;
+    height: 100%;
+    width: 50%;
+    min-width: 200px;
+    font-size: 18px;
+    padding-left: 2%;
 }
 
 .search-button {
-    padding: 15px 16px;
+    width: 35%;
+    min-width: 120px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: #0065FC;
-    border: 1px solid #0065FC;
     border-radius: 0px 15px 15px 0px;
     color: white;
     font-weight: 700;
     font-size: 18px;
-    line-height: 21px;
+    align-items: center;
     text-align: center;
+}
+
+.search-button a {
+    color: white;
 }
 
 .filters {
@@ -229,15 +249,12 @@ nav li:hover a {
 .hebergements-cards {
     display: flex;
     flex-wrap: wrap;
-    flex-basis: 33%;
 }
 
 .hebergements-cards .card {
     height: 207.25px;
-    width: 30%;
     display: flex;
     flex-direction: column;
-    margin: auto;
     margin-top: 30px;
 }
 
@@ -352,6 +369,7 @@ nav li:hover a {
 footer {
     display: flex;
     background-color: var(--main-bg-color);
+    flex-wrap: wrap;
 }
 
 .a-propos {
