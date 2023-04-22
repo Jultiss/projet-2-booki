@@ -17,9 +17,9 @@
 
 <body>
     <div class="main-container">
-        <header class="header">
-            <div class="logo"><a href="index.html"><img src="Images/logo/Booki.png" alt="Logo Booki"></a></div>
-            <nav class="menu">
+        <header>
+            <a href="index.html"><img src="Images/logo/Booki.png" alt="Logo Booki"></a>
+            <nav>
                 <ul>
                     <li><a href="#hebergements-and-populaires">Hébergements</a></li>
                     <li><a href="#activites">Activités</a></li>
@@ -27,25 +27,42 @@
             </nav>
         </header>
         <main>
-            <div class="search">
-                <p class="search-title">Trouvez votre hébergement pour des vacances de rêve</p>
-                <p class="search-subtitle">En plein centre-ville ou en pleine nature</p>
-                <div class="search-bar">
-                    <div class="search-icon"><i class="fa-solid fa-location-dot"></i></div>
-                    <input type="search" class="search-text" name="search"></input>
-                    <div class="search-button"><a href="#">Rechercher</a></div>
+            <p class="search-title">Trouvez votre hébergement pour des vacances de rêve</p>
+            <p class="search-subtitle">En plein centre-ville ou en pleine nature</p>
+            <div class="search-bar">
+                <div class="search-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <input type="search" class="search-text" name="search"></input>
+                <div class="search-button"><a href="#">Rechercher</a></div>
+                <div class="search-button-icon">
+                    <a href="#"><i class="fa-solid fa-magnifying-glass" id="search-icon"></i></a>
                 </div>
-                <div class="filters">
-                    <div class="filters-title">Filtres</div>
-                    <div class="filter-button"><i class="fa-solid fa-money-bill-wave"></i>  Economique</div>
-                    <div class="filter-button"><i class="fa-solid fa-person"></i>  Familial</div>
-                    <div class="filter-button"><i class="fa-solid fa-heart"></i>  Romantique</div>
-                    <div class="filter-button"><i class="fa-solid fa-fire"></i>  Nos pépites</div>
+            </div>
+            <div class="filters">
+                <div class="filters-title">
+                    <h2>Filtres</h2>
                 </div>
-                <div class="nota-bene">
-                    <div class="material-symbols-outlined">info</div>
-                    <div class="nota-bene-text">Plus de 500 logements sont disponibles dans cette ville</div>
+                <div class="filters-buttons-all">
+                    <div class="filters-button">
+                        <i class="fa-solid fa-money-bill-wave"></i>
+                        <h2>Economique</h2>
+                    </div>
+                    <div class="filters-button">
+                        <i class="fa-solid fa-person"></i>
+                        <h2>Familial</h2>
+                    </div>
+                    <div class="filters-button">
+                        <i class="fa-solid fa-heart"></i>
+                        <h2>Romantique</h2>
+                    </div>
+                    <div class="filters-button">
+                        <i class="fa-solid fa-fire"></i>
+                        <h2>Nos pépites</h2>
+                    </div>
                 </div>
+            </div>
+            <div class="nota-bene">
+                <div class="material-symbols-outlined">info</div>
+                <div class="nota-bene-text">Plus de 500 logements sont disponibles dans cette ville</div>
             </div>
             <div id="hebergements-and-populaires" class="hebergements-and-populaires">
                 <section class="hebergements">
@@ -252,7 +269,7 @@
                         <h3 class="card-activity-title">Notre Dame de la Garde</h3>
                     </article>
                 </div>
-        </div>
+            </div>
         </main>
         <footer>
             <div class="a-propos">
