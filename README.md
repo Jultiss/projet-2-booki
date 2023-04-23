@@ -1,2 +1,2 @@
 Testez moi sur :
-https://wwww.julemgo.com
+https://www.julemgo.com
