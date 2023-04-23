@@ -1,4 +1,5 @@
 /****** General ***********/
+ 
 * {
     font-family: 'Raleway', sans-serif;
 }
@@ -79,6 +80,13 @@ a {
 
 /*********Géneral Media Queries for tablette**********/
 
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    body {
+        max-width: 100%;
+        margin: 0;
+    }
+}
+
 /****** Header *****************/
 
 header {
@@ -87,11 +95,11 @@ header {
     align-items: center;
     width: 100%;
     height: 4rem;
+    margin-left: 2rem;
 }
 
 header img {
     width: 4rem;
-    padding: 2rem;
 }
 
     nav {
@@ -156,6 +164,7 @@ header img {
         flex-direction: column;
         width: 100%;
         height: auto;
+        margin-left: 0;
     }
 
     header img {
@@ -208,6 +217,14 @@ header img {
     }
 }
 
+/* Header Media queries pour tablette */
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    header {
+        margin-left: 2rem;
+        width: auto;
+    }
+}
 
 /*****Search Bar*****************************/
 
@@ -507,19 +524,18 @@ header img {
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
     
     .promesse {
-        margin: 8px;
+        margin: 2rem;
     }
 
     .search-bar {
         display: flex;
         text-align: center;
-        width:auto;
+        width: 50%;
         height: 3rem;
         background: #FFFFFF;
         border: 1px solid #F2F2F2;
         border-radius: 15px;
-        margin-top: 1rem;
-        margin: 8px;
+        margin: 2rem;
     }
 
     .search-icon {
@@ -560,7 +576,6 @@ header img {
         color: white;
         font-weight: 700;
         font-size: 18px;
-        margin-right: 0.5rem;
     }
 
     .search-button a {
@@ -570,77 +585,41 @@ header img {
 
     .search-button-icon {
         display: none;
-        align-items: center;
-        justify-content: center;
-        background: #0065FC;
-        height: 100%;
-        min-width: 3rem;
-        border: none;
-        border-radius: 0px 15px 15px 0px;
-        color: white;
-        font-weight: 700;
-        font-size: 18px;
-        align-items: center;
-        text-align: center;
-    }
-
-    .search-button-icon .fa-solid {
-        color:#FFFFFF
     }
 
     .filters {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: start;
-        flex-wrap: wrap;
-        width: 100%;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-        gap: 1rem;
+        flex-wrap: nowrap;
+        width: auto;
+        margin: 2rem;
     }
     
-      .filters .fa-solid {
-        font-size: 1.5rem;
+    .filters .fa-solid {
+        font-size: 1rem;
     }  
 
-      .filters-title {
+    .filters-title {
         font-weight: bold;
         text-align:left;
-        margin-left: 1rem;
     }
       
-      .filters-buttons-all {
+    .filters-buttons-all {
+        justify-content: start;
+        font-size: 12px;
+
+    }
+      
+    .filters-button {
+        width: auto;
+    }
+
+    .nota-bene {
         display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-    }
-      
-      .filters-button {
-        display: flex;
-        font-size: 0.7rem;
-        font-weight: bold;
-        text-align: left;
-        height: 2rem;
-        border: 1px solid #D9D9D9;
-        border-radius: 25px;
-        width: 6rem;
-    }
-      
-      .filters-button:hover {
-        background-color: #DEEBFF;
-        cursor: pointer;
-    }
-      
-      .material-symbols-outlined {
-        color: #0065FC;
-    }
-      
-      .nota-bene {
-        display: flex;
-        margin-top: 10px;
         margin-bottom: 30px;
-        font-size: 20px;
-        margin-left: 1rem;
+        font-size: 1rem;
+        margin-left: 2rem;
     }
 }
 
@@ -654,7 +633,7 @@ header img {
 
 .hebergements-and-populaires section {
     border-radius: 20px;
-    padding: 30px;
+    padding: 1rem;
     box-sizing: border-box;
 }
 
@@ -686,19 +665,17 @@ header img {
     .hebergements-and-populaires {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        width: 100%;
         gap: 2rem;
+
     }
 
     .hebergements-and-populaires section {
         width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        border-radius: 0;
-        background-color: #F2F2F2;
-        border-radius: 15px;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin: 0;
     }
+
 }
 /****** Hebergements ***********/
 .hebergements {
@@ -734,6 +711,7 @@ header img {
     flex-direction: column;
     justify-content: space-between;
     box-sizing: border-box;
+    padding-left: 1rem;
 }
 
 .hebergements-cards .card-title {
@@ -833,8 +811,11 @@ header img {
 
     .hebergements {
         width: 100%;
+        padding: 0;
         display: flex;
         flex-direction: column;
+        margin-left: 2rem;
+        margin-right: 2rem;
     }
     
     .hebergements-title {
@@ -843,12 +824,10 @@ header img {
 
     .hebergements-cards {
         display: flex;
-        flex-basis: 31%;
+        flex-basis: 30%;
     }
     
     .hebergements-cards .card {
-        height: 230px;
-        width: 100%;
         display: flex;
         flex-direction: column;
         margin-top: 1rem;
@@ -863,7 +842,7 @@ header img {
     
     .hebergements-cards .card-content {
         width: 100%;
-        height: 207.25px;
+        height: auto;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -975,6 +954,8 @@ header img {
         padding: 0;
         display: flex;
         flex-direction: column;
+        margin-left: 2rem;
+
     }
 
     .populaires-title {
@@ -985,9 +966,20 @@ header img {
     .populaires-cards {
         display: flex;
         width: auto;
-        flex-direction: column;
-        padding-left: 1rem;
-        padding-right: 1rem;
+        justify-content: space-between;
+        gap: 1rem;
+        font-size: 12px;
+    }
+
+    .populaires-cards img {
+        width: 30%;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        object-fit: cover;
+    }
+
+    .populaires-cards h3 {
+        font-size: small;
     }
     
     .populaires-cards .card {
@@ -1029,7 +1021,7 @@ header img {
 }
 
 .card-activity-title {
-    padding: 20px 20px;
+    padding-left: 1rem;
 }
 
 /****** Activités Media Queries for smartphone ***********/
@@ -1073,6 +1065,43 @@ header img {
     }    
 }
 
+/****** Activités Media Queries for tablette ***********/
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    .activites {
+        margin: 2rem;
+    }
+    
+    .activites-cards {
+        display: flex;
+        justify-content: space-between;
+        height: 230px;
+    }
+    
+    .card-activity {
+        width: 22%;
+        height: 230px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .card-activity img {
+        object-fit: cover;
+        width: 100%;
+        height: 70%;
+        border-radius: 20px 20px 0px 0px;
+    }
+    
+    .card-activity-title {
+        padding-top: 0;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        height: 15%;
+        font-size: 1rem;
+    }    
+}
+
+
 /********* Footer *************/
 
 footer {
@@ -1082,7 +1111,8 @@ footer {
 
 .a-propos {
     width: 30%;
-    margin: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 
 .li-footer {
@@ -1118,4 +1148,8 @@ footer {
     }
 
 }    
+
+/****** Footer Media Queries for tablette ***********/
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
 
