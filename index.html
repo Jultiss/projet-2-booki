@@ -12,26 +12,27 @@
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" >
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,300,0,0" >
 </head>
 
 <body>
-    <div class="main-container">
-        <header>
-            <a href="index.html"><img src="Images/logo/Booki.png" alt="Logo Booki"></a>
-            <nav>
-                <ul>
-                    <li><a href="#hebergements-and-populaires">Hébergements</a></li>
-                    <li><a href="#activites">Activités</a></li>
-                </ul>
-            </nav>
-        </header>
+    <header>
+        <a href="index.html"><img src="Images/logo/Booki.png" alt="Logo Booki"></a>
+        <nav>
+            <ul>
+                <li><a href="#hebergements-and-populaires">Hébergements</a></li>
+                <li><a href="#activites">Activités</a></li>
+            </ul>
+        </nav>
+    </header>
+            <div class="main-container">
         <main>
-            <p class="search-title">Trouvez votre hébergement pour des vacances de rêve</p>
-            <p class="search-subtitle">En plein centre-ville ou en pleine nature</p>
+            <div class="promesse">
+                <p class="search-title">Trouvez votre hébergement pour des vacances de rêve</p>
+                <p class="search-subtitle">En plein centre-ville ou en pleine nature</p>
+            </div>
             <div class="search-bar">
                 <div class="search-icon"><i class="fa-solid fa-location-dot"></i></div>
-                <input type="search" class="search-text" name="search"></input>
+                <input type="search" class="search-text" name="search">
                 <div class="search-button"><a href="#">Rechercher</a></div>
                 <div class="search-button-icon">
                     <a href="#"><i class="fa-solid fa-magnifying-glass" id="search-icon"></i></a>
@@ -61,7 +62,7 @@
                 </div>
             </div>
             <div class="nota-bene">
-                <div class="material-symbols-outlined">info</div>
+                <i class="fa-solid fa-info"></i>
                 <div class="nota-bene-text">Plus de 500 logements sont disponibles dans cette ville</div>
             </div>
             <div id="hebergements-and-populaires" class="hebergements-and-populaires">
@@ -271,31 +272,30 @@
                 </div>
             </div>
         </main>
-        <footer>
-            <div class="a-propos">
-                <h3>A propos</h3>
-                <ul class="li-footer">
-                    <li>Fonctionnement du site</li>
-                    <li>Conditions générales</li>
-                    <li>Données et confidentialité</li>
-                </ul>
-            </div>
-            <div class="a-propos">
-                <h3>Nos hébergements</h3>
-                <ul class="li-footer">
-                    <li>Charte qualité</li>
-                    <li>Proposer votre hôtel</li>
-                </ul>
-            </div>
-            <div class="a-propos">
-                <h3>Assistance</h3>
-                <ul class="li-footer">
-                    <li>Centre d'aide</li>
-                    <li>Nous contacter</li>
-                </ul>
-            </div>
-        </footer>
     </div>
+    <footer>
+        <div class="a-propos">
+            <h3>A propos</h3>
+            <ul class="li-footer">
+                <li>Fonctionnement du site</li>
+                <li>Conditions générales</li>
+                <li>Données et confidentialité</li>
+            </ul>
+        </div>
+        <div class="a-propos">
+            <h3>Nos hébergements</h3>
+            <ul class="li-footer">
+                <li>Charte qualité</li>
+                <li>Proposer votre hôtel</li>
+            </ul>
+        </div>
+        <div class="a-propos">
+            <h3>Assistance</h3>
+            <ul class="li-footer">
+                <li>Centre d'aide</li>
+                <li>Nous contacter</li>
+            </ul>
+        </div>
+    </footer>
 </body>
-
 </html>

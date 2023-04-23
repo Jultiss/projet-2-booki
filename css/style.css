@@ -14,15 +14,13 @@
 }
 
 body {
-    display: flex;
-    justify-content: center;
+    margin: 0;
 }
+
 
 .main-container {
     width: 100%;
     max-width: 1440px;
-    padding: 0 50px;
-    box-sizing: border-box;
 }
 
 .section-title {
@@ -40,7 +38,7 @@ body {
 .card-link {
     display: flex;
     flex-wrap: wrap;
-    flex-basis: 33%;
+    flex-basis: 31%;
     margin: auto;
 }
 
@@ -64,6 +62,22 @@ a {
     text-decoration: none;
 }
 
+/*******Géneral Media Queries for smartphone**********/
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    body {
+        max-width: 100%;
+        margin: 0rem;
+    }
+    
+    
+    .main-container {
+        width: 100%;
+        max-width: 1440px;
+    }
+}
+
+/*********Géneral Media Queries for tablette**********/
 
 /****** Header *****************/
 
@@ -77,36 +91,55 @@ header {
 
 header img {
     width: 4rem;
+    padding: 2rem;
 }
 
-nav {
-    padding:0;
-}
+    nav {
+        display: flex;
+        flex-direction: row;
+        width: 30%;
+        padding: 0;
+        margin: 0;
+    }
+    
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
 
-nav ul {
-  display: flex;
-  list-style: none;
-  margin: auto;
-  padding: 0;
-}
+    nav li {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        flex: 1;
+        text-align: center;
+    }
 
-nav a {
-    display: inline-block;
-    text-align: center;
-    text-decoration: none;
-    width: 10rem;
-    padding-top: 1rem;
-    padding-bottom: 2rem;
-    font-size: 16px;
-    font-weight: 500;
-    color: black;
-  }
+    nav a {
+        display: block;
+        text-decoration: none;
+        padding-bottom: 1.5rem;
+        font-size: 16px;
+        font-weight: 500;
+        color: black;
+        width: 100%;
+        padding-top: 1rem;
+        box-sizing: border-box;
+    }
   
-  nav a:hover {
-    border-top: solid 2px #0065FC;
-    cursor:pointer;
-    color: #0065FC;
-}
+    nav a:hover {
+        border-top: solid 2px #0065FC;
+        transition: width 0.4s ease-in-out;
+        cursor:pointer;
+        color: #0065FC;
+        width: 100%;
+    }
 
 /* Header Media queries pour smartphones */
 
@@ -127,73 +160,60 @@ nav a {
 
     header img {
         width: 4rem;
-        padding-bottom: 1rem;
+        padding: 1rem;
     }
 
     nav {
-        flex-direction: row;
-        width: fit-content;
-        justify-content: space-between;
-    }
-
-    nav a {
-    text-decoration: none;
-    padding-top: 0rem;
-    padding-bottom: 1rem;
-    font-size: 16px;
-    font-weight: 500;
-    color: black;
-    }
-
-    nav a:hover {
-        border-top: none;
-        border-bottom: solid 2px #0065FC;
-    }
-}
-
-/* Header Media queries pour tablettes */
-
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-
-    .main-container {
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    header {
+        display: flex;
         flex-direction: row;
         width: 100%;
         padding: 0;
-        gap: 30px;
-        height: auto;
+        margin: 0;
     }
-
-    header img {
-        width: 4rem;
-    }
-
-    nav {
+    
+    nav ul {
+        display: flex;
         flex-direction: row;
-        width: fit-content;
-        justify-content: space-between;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    nav li {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        flex: 1;
+        text-align: center;
     }
 
     nav a {
+        display: block;
         text-decoration: none;
         padding-top: 0rem;
         padding-bottom: 1rem;
         font-size: 16px;
         font-weight: 500;
         color: black;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     nav a:hover {
         border-top: none;
-        border-bottom: solid 2px #0065FC;
+        border-bottom: solid 3px #0065FC;
     }
-}  
+}
+
 
 /*****Search Bar*****************************/
+
+.promesse {
+    margin: 2rem;
+}
 
 .search-title {
     font-weight: 700;
@@ -218,7 +238,7 @@ nav a {
     background: #FFFFFF;
     border: 1px solid #F2F2F2;
     border-radius: 15px;
-    margin-top: 0.5rem;
+    margin: 2rem;
 }
 
 .search-icon {
@@ -239,7 +259,7 @@ nav a {
 
 .search-text {
     height: 100%;
-    width: 45%;
+    width: 50%;
     min-width: 200px;
     font-size: 18px;
     padding-left: 2%;
@@ -275,7 +295,7 @@ nav a {
 .filters {
     display: flex;
     align-items: center;
-    margin-top: 1rem;
+    margin: 2rem;
 }
 
 .filters-title {
@@ -285,7 +305,8 @@ nav a {
 .filters-button {
     display: flex;
     align-items: center;
-    width: fit-content;
+    width: 173px;
+    height: 50px;
     min-height: 2rem;
     column-gap: 0.5rem;
     padding-right: 15px;
@@ -309,21 +330,42 @@ nav a {
     background-color: #DEEBFF;
     cursor: pointer;
 }
-.material-symbols-outlined {
-    color: #0065FC;
-}
 
+.filters-button.active {
+    background-color: #DEEBFF;
+    }
+    
 .nota-bene {
     display: flex;
-    margin-top: 10px;
+    align-items: center;
+    margin: 2rem;
     margin-bottom: 30px;
     font-size: 20px;
+    margin: 2rem;
 }
+
+.nota-bene .fa-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--main-color);
+    border: 1px solid var(--main-bg-color);
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    font-size: 16px;
+    margin-right: 1rem;
+}
+
 
 /*****Search Bar Media Queries for Smartphone*****************************/
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     
+    .promesse {
+        margin: 1rem;
+    }
+
     .search-bar {
         display: flex;
         text-align: center;
@@ -332,8 +374,8 @@ nav a {
         background: #FFFFFF;
         border: 1px solid #F2F2F2;
         border-radius: 15px;
-        margin-top: 1rem;
-    }
+        margin: 1rem;
+        }
 
     .search-icon {
         width: 15%;
@@ -354,7 +396,7 @@ nav a {
 
     .search-text {
         height: 100%;
-        width: 100%;
+        width: 50%;
         min-width: 180px;
         font-size: 18px;
         padding-left: 1rem;
@@ -406,10 +448,156 @@ nav a {
         flex-direction: column;
         align-items: start;
         flex-wrap: wrap;
-        margin-top: 2rem;
-        margin-bottom: 2rem;
+        margin: 1rem;
+    }
+    
+    .filters .fa-solid {
+    font-size: 1.5rem;
+    }  
+
+    .filters-title {
+    font-weight: bold;
+    text-align:left;
+    margin-left: 1rem;
+    }
+      
+    .filters-buttons-all {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    }
+    
+    .filters-button {
+    display: flex;
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-align: left;
+    height: 3rem;
+    border: 1px solid #D9D9D9;
+    border-radius: 25px;
+    width: 35%;
+    }
+    
+    .filters-button:hover {
+        background-color: #DEEBFF;
+        cursor: pointer;
+    }            
+    .nota-bene {
+        margin: 1rem;
+        font-size: 1rem;
+    }
+    
+    .nota-bene .fa-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--main-color);
+        border: 1px solid var(--main-bg-color);
+        border-radius: 50%;
+        width: 3rem;
+        height: 2rem;
+        font-size: 16px;
+        margin-right: 1rem;
+    }    
+}
+
+/********* Search Bar Media Queries for tablette ************/
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    
+    .promesse {
+        margin: 8px;
+    }
+
+    .search-bar {
+        display: flex;
+        text-align: center;
+        width:auto;
+        height: 3rem;
+        background: #FFFFFF;
+        border: 1px solid #F2F2F2;
+        border-radius: 15px;
+        margin-top: 1rem;
+        margin: 8px;
+    }
+
+    .search-icon {
+        width: 15%;
+        min-width: 3rem;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color:var(--main-bg-color);
+        border: 1px solid #F2F2F2;
+        border-radius: 15px 0px 0px 15px;
+    }
+
+    .fa-location-dot {
+        color: #000000;
+        font-size: 1.5rem;
+    }
+
+    .search-text {
+        height: 100%;
+        width: 50%;
+        min-width: 200px;
+        font-size: 18px;
+        padding-left: 1rem;
+        border: none;
+    }
+
+    .search-button {
+        width: 35%;
+        min-width: 110px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        background: #0065FC;
+        border: none;
+        border-radius: 0px 15px 15px 0px;
+        color: white;
+        font-weight: 700;
+        font-size: 18px;
+        margin-right: 0.5rem;
+    }
+
+    .search-button a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .search-button-icon {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        background: #0065FC;
+        height: 100%;
+        min-width: 3rem;
+        border: none;
+        border-radius: 0px 15px 15px 0px;
+        color: white;
+        font-weight: 700;
+        font-size: 18px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .search-button-icon .fa-solid {
+        color:#FFFFFF
+    }
+
+    .filters {
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
         gap: 1rem;
-      }
+    }
     
       .filters .fa-solid {
         font-size: 1.5rem;
@@ -419,33 +607,33 @@ nav a {
         font-weight: bold;
         text-align:left;
         margin-left: 1rem;
-      }
+    }
       
       .filters-buttons-all {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-      }
+    }
       
       .filters-button {
         display: flex;
         font-size: 0.7rem;
         font-weight: bold;
         text-align: left;
-        height: 3rem;
+        height: 2rem;
         border: 1px solid #D9D9D9;
         border-radius: 25px;
-        width: 35%; /*ajout de la largeur pour deux boutons sur chaque ligne*/
-      }
+        width: 6rem;
+    }
       
       .filters-button:hover {
         background-color: #DEEBFF;
         cursor: pointer;
-      }
+    }
       
       .material-symbols-outlined {
         color: #0065FC;
-      }
+    }
       
       .nota-bene {
         display: flex;
@@ -453,14 +641,15 @@ nav a {
         margin-bottom: 30px;
         font-size: 20px;
         margin-left: 1rem;
-      }
-            
+    }
 }
 
 /****** Hebergements And Populaires ***********/
+
 .hebergements-and-populaires {
     display: flex;
     justify-content: space-between;
+    margin: 2rem;
 }
 
 .hebergements-and-populaires section {
@@ -476,23 +665,46 @@ nav a {
     .hebergements-and-populaires {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        width: auto;
+        justify-content: space-around;
+        width: 100%;
+        margin: 0;
     }
 
     .hebergements-and-populaires section {
-        display: flex;
-        flex-wrap: wrap;
-        width: auto;
-        border-radius: 20px;
-        padding: 1rem;
-        box-sizing: border-box;
+        width: 100%;
+        border-radius: 0;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin: 0;
     }
 }
 
+/********* Hebergements And Populaires Media Queries for tablette ************/
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+
+    .hebergements-and-populaires {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        gap: 2rem;
+    }
+
+    .hebergements-and-populaires section {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        border-radius: 0;
+        background-color: #F2F2F2;
+        border-radius: 15px;
+    }
+}
 /****** Hebergements ***********/
 .hebergements {
     width: 65%;
+    background-color: var(--main-bg-color);
+
 }
 
 .hebergements-cards {
@@ -505,7 +717,7 @@ nav a {
     width: 100%;
     display: flex;
     flex-direction: column;
-    margin-top: 30px;
+    margin-top: 1rem;
 }
 
 .hebergements-cards img {
@@ -547,10 +759,15 @@ nav a {
         background-color: white;
     }
     
+    .hebergements-title {
+        margin: 1rem;
+    }
+
     .hebergements-cards {
         display: flex;
         flex-wrap: nowrap;
         flex-direction: column;
+        align-items: center;
         width: 100%;
     }
     
@@ -559,7 +776,8 @@ nav a {
         width: 100%;
         display: flex;
         flex-direction: column;
-        margin-top: 30px;
+        margin-top: 1rem;
+        box-sizing: border-box;
     }
     
     .hebergements-cards img {
@@ -567,10 +785,11 @@ nav a {
         height: 60%;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
+        object-fit: cover;
     }
     
     .hebergements-cards .card-content {
-        width:max-content;
+        width: 100%;
         height: 207.25px;
         display: flex;
         flex-direction: column;
@@ -594,8 +813,82 @@ nav a {
     .card-link {
         display: flex;
         flex-wrap: wrap;
-        margin-left: 0;
-        margin-right: 0;
+        align-items: center;
+        width: 100%;
+    }    
+
+    .card {
+        background-color: white;
+        width: 100%;
+        border-radius: 20px;
+        padding: 5px;
+        filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+    }
+    
+}
+
+/********* Hebergements Media Queries for tablette ************/
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+
+    .hebergements {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .hebergements-title {
+        margin: 1rem;
+    }
+
+    .hebergements-cards {
+        display: flex;
+        flex-basis: 31%;
+    }
+    
+    .hebergements-cards .card {
+        height: 230px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
+    }
+    
+    .hebergements-cards img {
+        width: 100%;
+        height: 60%;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+    
+    .hebergements-cards .card-content {
+        width: 100%;
+        height: 207.25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-sizing: border-box;
+    }
+    
+    .hebergements-cards .card-title {
+        margin-top: 10px;
+        margin-bottom: 4px;
+    }
+    
+    .hebergements-cards .card-subtitle {
+        margin: 0;
+    }
+    
+    .hebergements-cards .card-rating {
+        margin-bottom: 5px;
+    }
+
+    .card-link {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 100%;
+        flex-basis: 31%;
     }    
 
     .card {
@@ -609,9 +902,10 @@ nav a {
 }
 
 /****** Populaires ***********/
+
 .populaires {
     width: 32%;
-    background-color: #D9D9D9;
+    background-color: var(--main-bg-color);
 }
 
 .populaires-title {
@@ -660,24 +954,60 @@ nav a {
 
     .populaires {
         width: 100%;
-        background-color:var(--main-bg-color);
+        padding: 0;
     }
 
     .populaires-title {
+        width: 100%;
         justify-content: space-between;
+    }
+    .card {
+        padding: 0;
     }
 }
 
+/****** Populaires Media Queries for tablette ***********/
 
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+
+    .populaires {
+        width: 100%;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .populaires-title {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .populaires-cards {
+        display: flex;
+        width: auto;
+        flex-direction: column;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .populaires-cards .card {
+        display: flex;
+        margin-top: 33px;
+        width: 100%;
+    }
+    .card {
+        padding: 0;
+    }
+}
 /********* Activités ************/
 
 .activites {
-    margin: 20px;
+    margin: 2rem;
 }
 
 .activites-cards {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
     gap: 20px;
 }
@@ -748,17 +1078,18 @@ nav a {
 footer {
     display: flex;
     background-color: var(--main-bg-color);
-    flex-wrap: wrap;
 }
 
 .a-propos {
-    width: 33%;
-    margin-left: 1rem;
-    margin-right: 2rem;
+    width: 30%;
+    margin: 2rem;
 }
 
 .li-footer {
     line-height: 35px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 /****** Footer Media Queries for smartphone ***********/
@@ -771,6 +1102,7 @@ footer {
         background-color: var(--main-bg-color);
         flex-direction: column;
         list-style: none;
+        padding: 2rem;
     }
 
     .a-propos {
