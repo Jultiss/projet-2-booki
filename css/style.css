@@ -88,11 +88,22 @@ h6 {
 
 /* Général Media queries pour smartphones */
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+@media only screen and (min-width : 320px) and (max-width : 767px) {
 
     h3 {
-        font-size: 14px;
+        font-size: 12px;
         font-weight: 700;
+    }
+}
+
+/* Général Media queries pour Grand Ecran */
+
+@media only screen and (min-width : 1441px) {
+
+    body {
+        max-width: 1440px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
@@ -154,7 +165,7 @@ nav a:hover {
 
 /* Header Media queries pour smartphones */
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+@media only screen and (min-width : 320px) and (max-width : 767px) {
 
     body {
         margin: 0rem;
@@ -227,7 +238,7 @@ nav a:hover {
 
 /* Header Media queries pour tablette ****/
 
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+@media only screen and (min-width : 768px) and (max-width : 1024px) {
 
     body {
         margin: 1rem;
@@ -384,7 +395,7 @@ nav a:hover {
 
 /*****Search Bar Media Queries for Smartphone*****************************/
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+@media only screen and (min-width : 320px) and (max-width : 767px) {
     
     .search-bar {
         display: flex;
@@ -520,7 +531,7 @@ nav a:hover {
 
 /********* Search Bar Media Queries for tablette ************/
 
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+@media only screen and (min-width : 768px) and (max-width : 1024px) {
     
     .search-bar {
         display: flex;
@@ -628,7 +639,7 @@ nav a:hover {
 
 /****** Hebergements And Populaires Media Queries for smartphone ***********/
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+@media only screen and (min-width : 320px) and (max-width : 767px) {
 
     .hebergements-and-populaires {
         display: flex;
@@ -649,7 +660,7 @@ nav a:hover {
 
 /********* Hebergements And Populaires Media Queries for tablette ************/
 
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+@media only screen and (min-width : 768px) and (max-width : 1024px) {
 
     .hebergements-and-populaires {
         display: flex;
@@ -716,7 +727,7 @@ nav a:hover {
 
 /****** Hebergements Media Queries for smartphone ***********/
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+@media only screen and (min-width : 320px) and (max-width : 767px) {
 
     .hebergements {
         width: 100%;
@@ -789,7 +800,7 @@ nav a:hover {
 
 /********* Hebergements Media Queries for tablette ************/
 
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+@media only screen and (min-width : 768px) and (max-width : 1024px) {
 
     .hebergements {
         width: 100%;
@@ -914,7 +925,7 @@ nav a:hover {
 
 /****** Populaires Media Queries for smartphone ***********/
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+@media only screen and (min-width : 320px) and (max-width : 767px) {
 
     .populaires {
         width: 110%;
@@ -938,7 +949,7 @@ nav a:hover {
 
 /****** Populaires Media Queries for tablette ***********/
 
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+@media only screen and (min-width : 768px) and (max-width : 1024px) {
 
     .populaires {
         width: 100%;
@@ -1011,7 +1022,7 @@ nav a:hover {
 
 /****** Activités Media Queries for smartphone ***********/
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+@media only screen and (min-width : 320px) and (max-width : 767px) {
     
     .activites {
         padding: 0rem;
@@ -1052,7 +1063,7 @@ nav a:hover {
 
 /****** Activités Media Queries for tablette ***********/
 
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+@media only screen and (min-width : 768px) and (max-width : 1024px) {
     
     .activites {
         padding: 0rem;
@@ -1108,7 +1119,7 @@ footer {
 
 /****** Footer Media Queries for smartphone ***********/
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+@media only screen and (min-width : 320px) and (max-width : 767px) {
 
     footer {
         width: auto;
@@ -1132,7 +1143,7 @@ footer {
 
 /****** Footer Media Queries for tablette ***********/
 
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+@media only screen and (min-width : 768px) and (max-width : 1024px) {
 
     footer {
         margin: 2rem;
