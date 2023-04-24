@@ -86,6 +86,15 @@ h6 {
     font-weight: 400;
 }
 
+/* Général Media queries pour smartphones */
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+    h3 {
+        font-size: 14px;
+        font-weight: 700;
+    }
+}
 
 /****** Header *****************/
 
@@ -183,6 +192,10 @@ nav a:hover {
         width: 100%;
     }
 
+    nav ul h5 {
+        width: 100%;
+    }
+
     nav li {
         display: flex;
         flex-direction: row;
@@ -208,6 +221,7 @@ nav a:hover {
     nav a:hover {
         border-top: none;
         border-bottom: solid 3px #0065FC;
+        width: 100%;
     }
 }
 
@@ -367,7 +381,6 @@ nav a:hover {
     font-size: 16px;
     margin-right: 1rem;
 }
-
 
 /*****Search Bar Media Queries for Smartphone*****************************/
 
@@ -626,11 +639,11 @@ nav a:hover {
     }
 
     .hebergements-and-populaires section {
-        width: 100%;
+        width: calc(100% + 2rem);
         border-radius: 0;
         padding-left: 1rem;
         padding-right: 1rem;
-        margin: 0;
+        margin-left: -1rem;
     }
 }
 
@@ -860,9 +873,13 @@ nav a:hover {
     align-items: center;
 }
 
+.populaires-cards {
+    display: flex;
+    gap: 1rem;
+    }
+
 .populaires-cards .card {
     display: flex;
-    margin-top: 33px;
 }
 
 .populaires-cards img {
@@ -899,10 +916,16 @@ nav a:hover {
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 
     .populaires {
-        width: 100%;
-        padding: 0;
+        width: 110%;
+        padding: -1rem;
     }
 
+    .populaires-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        }
+    
     .populaires-title {
         width: 100%;
         justify-content: space-between;
@@ -992,6 +1015,10 @@ nav a:hover {
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     
+    .activites {
+        padding: 0rem;
+    }
+    
     .activites-cards {
         display: flex;
         flex-direction: column;
@@ -1029,6 +1056,10 @@ nav a:hover {
 
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
     
+    .activites {
+        padding: 0rem;
+    }
+
     .activites-cards {
         display: flex;
         justify-content: space-between;
@@ -1092,7 +1123,6 @@ footer {
     .a-propos {
         width: auto;
         margin-left: 0;
-
     }
 
     .li-footer {
@@ -1100,6 +1130,12 @@ footer {
         text-align: left;
         padding-left: 0;
     }
+}
 
-}    
+/****** Footer Media Queries for tablette ***********/
 
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+
+    footer {
+        margin: 2rem;
+    }
