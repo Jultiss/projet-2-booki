@@ -14,20 +14,11 @@
     color: var(--main-color);
 }
 
-body {
-    margin: 0;
-}
-
-
 .main-container {
-    width: 100%;
     max-width: 1440px;
-}
-
-.section-title {
-    margin: 0;
-    font-size: 22px;
-}
+    margin-left: auto;
+    margin-right: auto;
+    }
 
 .card {
     background-color: white;
@@ -63,29 +54,36 @@ a {
     text-decoration: none;
 }
 
-/*******Géneral Media Queries for smartphone**********/
-
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-    body {
-        max-width: 100%;
-        margin: 0rem;
-    }
-    
-    
-    .main-container {
-        width: 100%;
-        max-width: 1440px;
-    }
+h1 {
+    font-size: 22px;
+    font-weight: 700;
 }
 
-/*********Géneral Media Queries for tablette**********/
-
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-    body {
-        max-width: 100%;
-        margin: 0;
-    }
+h2 {
+    font-size: 18px;
+    font-weight: 700;
 }
+
+h3 {
+    font-size: 17px;
+    font-weight: 700;
+}
+
+h4 {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+h5 {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+h6 {
+    font-size: 14px;
+    font-weight: 400;
+}
+
 
 /****** Header *****************/
 
@@ -93,78 +91,63 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    height: 4rem;
-    margin-left: 2rem;
 }
 
 header img {
     width: 4rem;
 }
 
-    nav {
-        display: flex;
-        flex-direction: row;
-        width: 30%;
-        padding: 0;
-        margin: 0;
-    }
-    
-    nav ul {
-        display: flex;
-        flex-direction: row;
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        width: 100%;
-    }
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 20%;
+    height: 100%;
+}
 
-    nav li {
-        display: flex;
-        flex-direction: row;
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        flex: 1;
-        text-align: center;
-    }
+nav ul {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
 
-    nav a {
-        display: block;
-        text-decoration: none;
-        padding-bottom: 1.5rem;
-        font-size: 16px;
-        font-weight: 500;
-        color: black;
-        width: 100%;
-        padding-top: 1rem;
-        box-sizing: border-box;
-    }
-  
-    nav a:hover {
-        border-top: solid 2px #0065FC;
-        transition: width 0.4s ease-in-out;
-        cursor:pointer;
-        color: #0065FC;
-        width: 100%;
-    }
+nav li {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    list-style: none;
+    flex: 1;
+    text-align: center;
+    height: auto;
+}
+
+nav a {
+    text-decoration: none;
+    align-items: start;
+    color: black;
+    width: 100%;
+    height: 100%;
+    padding-top: 1.3rem;
+    box-sizing: border-box;
+}
+nav a:hover {
+    border-top: solid 2px #0065FC;
+    transition: width 0.4s ease-in-out;
+    cursor:pointer;
+    color: #0065FC;
+    width: 100%;
+}
 
 /* Header Media queries pour smartphones */
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 
-    .main-container {
-        width: 100%;
-        padding: 0;
-        gap: 30px;
-        box-sizing: border-box;
-    }    
-    
     header {
         flex-direction: column;
         width: 100%;
-        height: auto;
-        margin-left: 0;
     }
 
     header img {
@@ -217,26 +200,20 @@ header img {
     }
 }
 
-/* Header Media queries pour tablette */
+/* Header Media queries pour tablette ****/
 
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-    header {
-        margin-left: 2rem;
-        width: auto;
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 30%;
+        height: 100%;
     }
 }
 
 /*****Search Bar*****************************/
-
-.promesse {
-    margin: 2rem;
-}
-
-.search-title {
-    font-weight: 700;
-    font-size: 22px;
-    margin-top: 1rem;
-}
 
 .search-subtitle {
     font-weight: 400;
@@ -255,7 +232,8 @@ header img {
     background: #FFFFFF;
     border: 1px solid #F2F2F2;
     border-radius: 15px;
-    margin: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .search-icon {
@@ -312,7 +290,8 @@ header img {
 .filters {
     display: flex;
     align-items: center;
-    margin: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .filters-title {
@@ -355,10 +334,9 @@ header img {
 .nota-bene {
     display: flex;
     align-items: center;
-    margin: 2rem;
-    margin-bottom: 30px;
     font-size: 20px;
-    margin: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .nota-bene .fa-info {
@@ -379,10 +357,6 @@ header img {
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     
-    .promesse {
-        margin: 1rem;
-    }
-
     .search-bar {
         display: flex;
         text-align: center;
@@ -391,7 +365,6 @@ header img {
         background: #FFFFFF;
         border: 1px solid #F2F2F2;
         border-radius: 15px;
-        margin: 1rem;
         }
 
     .search-icon {
@@ -465,7 +438,6 @@ header img {
         flex-direction: column;
         align-items: start;
         flex-wrap: wrap;
-        margin: 1rem;
     }
     
     .filters .fa-solid {
@@ -475,7 +447,6 @@ header img {
     .filters-title {
     font-weight: bold;
     text-align:left;
-    margin-left: 1rem;
     }
       
     .filters-buttons-all {
@@ -501,7 +472,6 @@ header img {
         cursor: pointer;
     }            
     .nota-bene {
-        margin: 1rem;
         font-size: 1rem;
     }
     
@@ -523,10 +493,6 @@ header img {
 
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
     
-    .promesse {
-        margin: 2rem;
-    }
-
     .search-bar {
         display: flex;
         text-align: center;
@@ -535,7 +501,6 @@ header img {
         background: #FFFFFF;
         border: 1px solid #F2F2F2;
         border-radius: 15px;
-        margin: 2rem;
     }
 
     .search-icon {
@@ -592,8 +557,6 @@ header img {
         flex-direction: column;
         align-items: start;
         flex-wrap: nowrap;
-        width: auto;
-        margin: 2rem;
     }
     
     .filters .fa-solid {
@@ -617,9 +580,7 @@ header img {
 
     .nota-bene {
         display: flex;
-        margin-bottom: 30px;
         font-size: 1rem;
-        margin-left: 2rem;
     }
 }
 
@@ -628,13 +589,12 @@ header img {
 .hebergements-and-populaires {
     display: flex;
     justify-content: space-between;
-    margin: 2rem;
 }
 
 .hebergements-and-populaires section {
     border-radius: 20px;
-    padding: 1rem;
     box-sizing: border-box;
+    padding: 1rem;
 }
 
 /****** Hebergements And Populaires Media Queries for smartphone ***********/
@@ -671,8 +631,6 @@ header img {
 
     .hebergements-and-populaires section {
         width: 100%;
-        padding-left: 1rem;
-        padding-right: 1rem;
         margin: 0;
     }
 
@@ -737,10 +695,6 @@ header img {
         background-color: white;
     }
     
-    .hebergements-title {
-        margin: 1rem;
-    }
-
     .hebergements-cards {
         display: flex;
         flex-wrap: nowrap;
@@ -813,8 +767,6 @@ header img {
         padding: 0;
         display: flex;
         flex-direction: column;
-        margin-left: 2rem;
-        margin-right: 2rem;
     }
     
     .hebergements-title {
@@ -953,8 +905,6 @@ header img {
         padding: 0;
         display: flex;
         flex-direction: column;
-        margin-left: 2rem;
-
     }
 
     .populaires-title {
@@ -993,13 +943,12 @@ header img {
 /********* Activités ************/
 
 .activites {
-    margin: 2rem;
+    padding: 1rem;
 }
 
 .activites-cards {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
     gap: 20px;
 }
 
@@ -1026,9 +975,6 @@ header img {
 /****** Activités Media Queries for smartphone ***********/
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-    .activites {
-        margin: 2rem;
-    }
     
     .activites-cards {
         display: flex;
@@ -1066,9 +1012,6 @@ header img {
 /****** Activités Media Queries for tablette ***********/
 
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-    .activites {
-        margin: 2rem;
-    }
     
     .activites-cards {
         display: flex;
@@ -1109,12 +1052,10 @@ footer {
 
 .a-propos {
     width: 30%;
-    margin-left: 2rem;
-    margin-right: 2rem;
+    padding-left: 2rem;
 }
 
 .li-footer {
-    line-height: 35px;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -1130,7 +1071,6 @@ footer {
         background-color: var(--main-bg-color);
         flex-direction: column;
         list-style: none;
-        padding: 2rem;
     }
 
     .a-propos {
