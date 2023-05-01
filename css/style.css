@@ -4,6 +4,10 @@
     font-family: 'Raleway', sans-serif;
 }
 
+body {
+    margin-top: 0
+}
+
 :root {
     --main-color: #0065FC;
     --main-bg-color: #F2F2F2;
@@ -69,6 +73,10 @@ h2 {
 h3 {
     font-size: 17px;
     font-weight: 700;
+}
+
+h3::first-letter {
+    text-transform: capitalize;
 }
 
 h4 {
@@ -152,7 +160,7 @@ nav a {
     color: black;
     width: 100%;
     height: 100%;
-    padding-top: 1.3rem;
+    padding-top: 1.5rem;
     box-sizing: border-box;
 }
 nav a:hover {
@@ -203,8 +211,10 @@ nav a:hover {
         width: 100%;
     }
 
-    nav ul h5 {
+    nav ul li h5 {
         width: 100%;
+        margin: 0;
+        display: flex;
     }
 
     nav li {
@@ -227,6 +237,7 @@ nav a:hover {
         color: black;
         width: 100%;
         box-sizing: border-box;
+        border-top: solid 2px transparent
     }
 
     nav a:hover {
@@ -240,6 +251,9 @@ nav a:hover {
 
 @media only screen and (min-width : 768px) and (max-width : 1024px) {
 
+    header {
+        padding-left: 2rem    }
+    
     body {
         margin: 1rem;
         padding: 0;
@@ -254,6 +268,13 @@ nav a:hover {
     }
 }
 
+/* Header Media queries pour Grand Ecran */
+
+@media only screen and (min-width : 1441px) {
+
+    header {
+        padding-left: 2rem    }
+    }
 /*****Search Bar*****************************/
 
 .search-subtitle {
@@ -929,7 +950,6 @@ nav a:hover {
 
     .populaires {
         width: 110%;
-        padding: -1rem;
     }
 
     .populaires-cards {
