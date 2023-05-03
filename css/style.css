@@ -256,6 +256,7 @@ nav a:hover {
     
     body {
         margin: 1rem;
+        margin-top: 0;
         padding: 0;
     }
     
